@@ -183,6 +183,7 @@ body {
 }
 
 .timeline-cards > div {
+  /* direction controlled by .is-rtl / .is-ltr on the root element */
   flex: 0 0 auto;
   position: relative;
   background: #ffffff;
@@ -195,6 +196,88 @@ body {
   overflow: hidden;
   scroll-snap-align: start;
   transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms cubic-bezier(.2,.9,.2,1);
+}
+
+/* Per-direction alignment helpers */
+.is-rtl .timeline-cards > div {
+  direction: rtl;
+}
+.is-rtl .timeline-cards > div h2,
+.is-rtl .timeline-cards > div h3,
+.is-rtl .timeline-cards > div p {
+  text-align: right;
+}
+.is-ltr .timeline-cards > div {
+  direction: ltr;
+}
+.is-ltr .timeline-cards > div h2,
+.is-ltr .timeline-cards > div h3,
+.is-ltr .timeline-cards > div p {
+  text-align: left;
+}
+
+.column-icon {
+  margin-inline-end: 8px;
+  color: #0f4f9c;
+}
+
+.learn-more-btn {
+  margin-top: 16px;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.75rem 1.2rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.learn-more-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(13, 110, 253, 0.16);
+}
+
+.learn-more-btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.35);
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Footer layout tweaks */
+@media (min-width: 768px) {
+  footer[role="contentinfo"] nav {
+    margin-left: auto;
+  }
+  footer[role="contentinfo"] .nav {
+    justify-content: flex-end;
+  }
+}
+
+/* Scroll progress bar */
+#scrollProgress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  z-index: 1200;
+}
+
+#scrollProgress .progress-bar {
+  transition: width 120ms linear, transform 120ms linear;
+  background: #1d4ed8; /* strong blue */
+}
+
+/* When in RTL, anchor the bar to the right so it fills from right-to-left */
+.is-rtl #scrollProgress .progress-bar {
+  left: auto !important;
+  right: 0;
 }
 
 .timeline-cards > div:hover {

@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
+  <!-- Scroll progress bar -->
+  <div id="scrollProgress" class="progress" aria-hidden="true">
+    <div id="scrollProgressBar" class="progress-bar" role="progressbar" style="width:0%" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  
+  <main id="mainContent">
 
   <!-- Hero Section -->
   <section class="hero">
@@ -21,14 +32,14 @@
       <!-- Subheading / Description -->
       <p>
         Explore Intel's journey through time, discovering how our commitment
-        to innovation has shaped a more sustainable future for technology 
+        to innovation has shaped a more sustainable future for technology
         and our planet.
       </p>
     </div>
   </section>
 
   <!-- Timeline Cards Section -->
-  <div class="timeline-nav">
+  <div class="timeline-nav" dir="ltr">
     <button class="timeline-button" id="timelinePrev" aria-label="Previous cards">←</button>
     <div class="timeline-scroll-wrapper">
       <section class="timeline-cards" id="timelineCards">
@@ -38,113 +49,204 @@
           <h2>1968</h2>
           <h3>Intel Founded</h3>
           <p>
-            Robert Noyce and Gordon Moore rename the newly formed company 
-            NM Electronics to Intel Corporation, laying the foundation for 
+            Robert Noyce and Gordon Moore rename the newly formed company
+            NM Electronics to Intel Corporation, laying the foundation for
             decades of technological innovation.
           </p>
           <img class="card-image" src="img/1.jpg" alt="Intel founded image" />
         </div>
 
-    <!-- Card 2: 1971 -->
-    <div>
-      <h2>1971</h2>
-      <h3>First Microprocessor</h3>
-      <p>
-        Intel debuts the 4004, the world's first commercial microprocessor, 
-        igniting the microprocessor revolution and propelling the future 
-        of computing devices.
-      </p>
-      <img class="card-image" src="img/2.jpg" alt="First microprocessor image" />
-    </div>
+        <!-- Card 2: 1971 -->
+        <div>
+          <h2>1971</h2>
+          <h3>First Microprocessor</h3>
+          <p>
+            Intel debuts the 4004, the world's first commercial microprocessor,
+            igniting the microprocessor revolution and propelling the future
+            of computing devices.
+          </p>
+          <img class="card-image" src="img/2.jpg" alt="First microprocessor image" />
+        </div>
 
-    <!-- Card 3: 1978 -->
-    <div>
-      <h2>1978</h2>
-      <h3>8086 Processor</h3>
-      <p>
-        Launch of the 8086 processor, establishing the x86 architecture 
-        that drives countless PCs and servers in the modern era.
-      </p>
-      <img class="card-image" src="img/3.jpg" alt="8086 processor image" />
-    </div>
+        <!-- Card 3: 1978 -->
+        <div>
+          <h2>1978</h2>
+          <h3>8086 Processor</h3>
+          <p>
+            Launch of the 8086 processor, establishing the x86 architecture
+            that drives countless PCs and servers in the modern era.
+          </p>
+          <img class="card-image" src="img/3.jpg" alt="8086 processor image" />
+        </div>
 
-    <!-- Card 4: 1985 -->
-    <div>
-      <h2>1985</h2>
-      <h3>386 Processor</h3>
-      <p>
-        Intel introduces the 386 processor with 32-bit architecture, 
-        ushering in a new era of performance and multitasking for 
-        personal computers.
-      </p>
-      <img class="card-image" src="img/4.jpg" alt="386 processor image" />
-    </div>
+        <!-- Card 4: 1985 -->
+        <div>
+          <h2>1985</h2>
+          <h3>386 Processor</h3>
+          <p>
+            Intel introduces the 386 processor with 32-bit architecture,
+            ushering in a new era of performance and multitasking for
+            personal computers.
+          </p>
+          <img class="card-image" src="img/4.jpg" alt="386 processor image" />
+        </div>
 
-    <!-- Card 5: 2006 -->
-    <div>
-      <h2>2006</h2>
-      <h3>Peak GHG Emissions</h3>
-      <p>
-        This year marks Intel's highest annual greenhouse gas emissions 
-        for operations. Over subsequent years, Intel invests heavily in 
-        chemical abatement, renewable energy, and energy-efficient 
-        manufacturing to reverse this trend.
-      </p>
-      <img class="card-image" src="img/2006.png" alt="Peak emissions image" />
-    </div>
+        <!-- Card 5: 2006 -->
+        <div>
+          <h2>2006</h2>
+          <h3>Peak GHG Emissions</h3>
+          <p>
+            This year marks Intel's highest annual greenhouse gas emissions
+            for operations. Over subsequent years, Intel invests heavily in
+            chemical abatement, renewable energy, and energy-efficient
+            manufacturing to reverse this trend.
+          </p>
+          <img class="card-image" src="img/2006.png" alt="Peak emissions image" />
+        </div>
 
-    <!-- Card 6: 2020 -->
-    <div>
-      <h2>2020</h2>
-      <h3>RISE Strategy</h3>
-      <p>
-        Intel launches its RISE (Responsible, Inclusive, Sustainable, 
-        Enabling) strategy and 2030 goals, aiming to drive industry-wide 
-        progress on climate action, water stewardship, and waste reduction.
-      </p>
-      <img class="card-image" src="img/2020.png" alt="RISE strategy image" />
-    </div>
+        <!-- Card 6: 2020 -->
+        <div>
+          <h2>2020</h2>
+          <h3>RISE Strategy</h3>
+          <p>
+            Intel launches its RISE (Responsible, Inclusive, Sustainable,
+            Enabling) strategy and 2030 goals, aiming to drive industry-wide
+            progress on climate action, water stewardship, and waste reduction.
+          </p>
+          <img class="card-image" src="img/2020.png" alt="RISE strategy image" />
+        </div>
 
-    <!-- Card 7: 2022 -->
-    <div>
-      <h2>2022</h2>
-      <h3>Net-Zero By 2040</h3>
-      <p>
-        Intel announces its commitment to achieve net-zero greenhouse 
-        gas emissions (Scope 1 and 2) across its global operations 
-        by 2040, building on years of environmental initiatives.
-      </p>
-      <img class="card-image" src="img/2022.png" alt="Net-zero announcement image" />
-    </div>
+        <!-- Card 7: 2022 -->
+        <div>
+          <h2>2022</h2>
+          <h3>Net-Zero By 2040</h3>
+          <p>
+            Intel announces its commitment to achieve net-zero greenhouse
+            gas emissions (Scope 1 and 2) across its global operations
+            by 2040, building on years of environmental initiatives.
+          </p>
+          <img class="card-image" src="img/2022.png" alt="Net-zero announcement image" />
+        </div>
 
-    <!-- Card 8: 2023 -->
-    <div>
-      <h2>2023</h2>
-      <h3>Renewable Electricity</h3>
-      <p>
-        The company achieves 99% renewable electricity usage worldwide, 
-        helping to drastically lower carbon emissions and driving progress 
-        toward Intel's long-term sustainability goals.
-      </p>
-      <img class="card-image" src="img/2023.png" alt="Renewable electricity image" />
-    </div>
+        <!-- Card 8: 2023 -->
+        <div>
+          <h2>2023</h2>
+          <h3>Renewable Electricity</h3>
+          <p>
+            The company achieves 99% renewable electricity usage worldwide,
+            helping to drastically lower carbon emissions and driving progress
+            toward Intel's long-term sustainability goals.
+          </p>
+          <img class="card-image" src="img/2023.png" alt="Renewable electricity image" />
+        </div>
 
-    <!-- Card 9: 2024 -->
-    <div>
-      <h2>2024</h2>
-      <h3>Sustainability Summit</h3>
-      <p>
-        Intel hosts its first Sustainability Summit, uniting suppliers, 
-        government officials, and industry leaders to collaborate on 
-        next-generation sustainable semiconductor manufacturing.
-      </p>
-      <img class="card-image" src="img/2024.png" alt="Sustainability summit image" />
-    </div>
-  </section>
+        <!-- Card 9: 2024 -->
+        <div>
+          <h2>2024</h2>
+          <h3>Sustainability Summit</h3>
+          <p>
+            Intel hosts its first Sustainability Summit, uniting suppliers,
+            government officials, and industry leaders to collaborate on
+            next-generation sustainable semiconductor manufacturing.
+          </p>
+          <img class="card-image" src="img/2024.png" alt="Sustainability summit image" />
+        </div>
+      </section>
     </div>
     <button class="timeline-button" id="timelineNext" aria-label="Next cards">→</button>
   </div>
   <p class="timeline-note">Scroll to view timeline | Hover over cards to learn more!</p>
+
+  <!-- 3-Column Content Section -->
+  <section>
+    <div class="container py-5">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+        <!-- Column 1 -->
+        <div class="col">
+          <div class="p-4 h-100">
+            <h2><i class="fa-solid fa-seedling column-icon" aria-hidden="true"></i>RISE Strategy</h2>
+            <p>
+              Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy,
+              Intel sets ambitious 2030 goals, including driving industry-wide
+              progress on climate action, water stewardship, and waste reduction.
+            </p>
+            <!-- Learn More Button -->
+            <button type="button" class="btn btn-primary learn-more-btn">Learn More</button>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col">
+          <div class="p-4 h-100">
+            <h2><i class="fa-solid fa-handshake-angle column-icon" aria-hidden="true"></i>Commitment</h2>
+            <p>
+              In 2022, Intel pledged to achieve net-zero greenhouse gas emissions
+              (Scope 1 and 2) by 2040. This commitment builds on decades of
+              environmental initiatives and partnerships across the semiconductor
+              industry.
+            </p>
+            <!-- Learn More Button -->
+            <button type="button" class="btn btn-primary learn-more-btn">Learn More</button>
+          </div>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="col">
+          <div class="p-4 h-100">
+            <h2><i class="fa-solid fa-droplet column-icon" aria-hidden="true"></i>Water &amp; Waste</h2>
+            <p>
+              Intel conserves billions of gallons of water annually and
+              collaborates with local communities to restore watersheds.
+              Intel also upcycles and recycles materials to reduce waste and
+              advance a circular economy.
+            </p>
+            <!-- Learn More Button -->
+            <button type="button" class="btn btn-primary learn-more-btn">Learn More</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Subscription Form -->
+  <section class="bg-white py-5" aria-labelledby="newsletterHeading">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6 text-center">
+          <h2 id="newsletterHeading">Subscribe to our Newsletter</h2>
+          <p>Stay updated on Intel's sustainability progress and future climate action stories.</p>
+          <form class="d-flex flex-column flex-sm-row gap-3 justify-content-center align-items-center" action="#" method="post" aria-describedby="newsletterHelp">
+            <label class="visually-hidden" for="newsletterEmail">Email address</label>
+            <input type="email" class="form-control" id="newsletterEmail" name="email" placeholder="Enter your email" autocomplete="email" inputmode="email" aria-required="true" required />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+          <p id="newsletterHelp" class="form-text text-muted small mt-3">We’ll only use your email to send sustainability updates. No spam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4" role="contentinfo">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div class="mb-3 mb-md-0 text-start">
+          <p class="mb-0">© 2026 Intel Corporation. All rights reserved.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <ul class="nav gap-3 mb-0">
+            <li class="nav-item"><a href="#" class="nav-link footer-link">Privacy Policy</a></li>
+            <li class="nav-item"><a href="#" class="nav-link footer-link">Terms of Use</a></li>
+            <li class="nav-item"><a href="#" class="nav-link footer-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
 
   <script>
     const timeline = document.getElementById('timelineCards');
@@ -176,4 +278,83 @@
       timeline.scrollBy({ left: getScrollDistance(), behavior: 'smooth' });
     });
   </script>
+
+  <script>
+    // List of language codes that should use RTL direction
+    const RTL_LANGS = ['ar','he','fa','ur','dv','ps','ku','sd'];
+
+    function isRtlLangCode(lang) {
+      if (!lang) return false;
+      const primary = lang.split('-')[0].toLowerCase();
+      return RTL_LANGS.includes(primary);
+    }
+
+    function applyDirectionForLang(lang) {
+      const useRtl = isRtlLangCode(lang || document.documentElement.lang);
+
+      // Set document direction and helper classes
+      document.documentElement.dir = useRtl ? 'rtl' : 'ltr';
+      document.documentElement.classList.toggle('is-rtl', useRtl);
+      document.documentElement.classList.toggle('is-ltr', !useRtl);
+
+      // Keep timeline navigation semantics LTR so arrow buttons behave consistently
+      const timelineNav = document.querySelector('.timeline-nav');
+      if (timelineNav) timelineNav.setAttribute('dir', 'ltr');
+
+      // Ensure timeline cards' textual flow matches the page direction
+      document.querySelectorAll('.timeline-cards > div').forEach(card => {
+        card.style.direction = useRtl ? 'rtl' : 'ltr';
+        const align = useRtl ? 'right' : 'left';
+        card.querySelectorAll('h2,h3,p').forEach(el => el.style.textAlign = align);
+      });
+    }
+
+    // Apply initially
+    applyDirectionForLang(document.documentElement.lang);
+
+    // Watch for changes to the document language attribute
+    const langObserver = new MutationObserver(mutations => {
+      for (const m of mutations) {
+        if (m.type === 'attributes' && m.attributeName === 'lang') {
+          applyDirectionForLang(document.documentElement.lang);
+        }
+      }
+    });
+    langObserver.observe(document.documentElement, { attributes: true });
+  </script>
+
+  <script>
+    // Scroll progress updater (updates a small progress bar at top)
+    (function () {
+      const progress = document.getElementById('scrollProgress');
+      const bar = document.getElementById('scrollProgressBar');
+      if (!progress || !bar) return;
+
+      let ticking = false;
+
+      function update() {
+        const doc = document.documentElement;
+        const scrollTop = window.pageYOffset || doc.scrollTop || 0;
+        const height = Math.max(doc.scrollHeight - window.innerHeight, 1);
+        const pct = Math.min(100, Math.max(0, (scrollTop / height) * 100));
+
+        // Apply width; for RTL anchoring we keep width but ensure bar is right-aligned via CSS
+        bar.style.width = pct + '%';
+        ticking = false;
+      }
+
+      function onScroll() {
+        if (!ticking) {
+          window.requestAnimationFrame(update);
+          ticking = true;
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll);
+      // initial
+      update();
+    })();
+  </script>
+
 </html>
