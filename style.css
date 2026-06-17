@@ -1,0 +1,258 @@
+/* Add your CSS here */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #1a1a1a;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 26px 14px;
+  background: linear-gradient(90deg,#008DD2 0%, #008DD2 55%, #004987 100%);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top center, rgba(255,255,255,0.14), transparent 36%);
+  pointer-events: none;
+}
+
+.hero > div {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 22px 16px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0;
+  backdrop-filter: blur(12px);
+}
+
+.hero img {
+  width: clamp(110px, 12vw, 100px);
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  margin: 0 0 14px;
+  line-height: 1.05;
+  text-shadow: 0 10px 28px rgba(5, 33, 98, 0.2);
+}
+
+.hero p {
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.98rem;
+}
+
+.timeline-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 14px 0 0;
+}
+
+.timeline-scroll-wrapper {
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.timeline-button {
+  background: #ffffff;
+  border: 1px solid rgba(29, 78, 216, 0.2);
+  border-radius: 999px;
+  color: #1d4ed8;
+  font-size: 1.4rem;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.timeline-button:hover {
+  background: rgba(29, 78, 216, 0.08);
+  transform: scale(1.05);
+}
+
+.timeline-cards {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 24px;
+  width: min(1112px, 100%);
+  margin: 0 auto;
+  padding: 14px 14px;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 18px;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 1250px) {
+  .timeline-cards {
+    width: min(828px, 100%);
+  }
+}
+
+@media (max-width: 950px) {
+  .timeline-cards {
+    width: min(540px, 100%);
+  }
+}
+
+@media (max-width: 670px) {
+  .timeline-nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    margin-top: 1rem;
+  }
+
+  .timeline-button {
+    display: none;
+  }
+
+  .timeline-scroll-wrapper {
+    overflow: visible;
+  }
+
+  .timeline-cards {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    padding: 0 12px 18px;
+    gap: 30px;
+    scroll-snap-type: none;
+    scroll-padding: 0;
+    overflow-x: visible;
+    align-items: center;
+    height: auto;
+  }
+
+  .timeline-cards > div {
+    width: 90% !important;
+    aspect-ratio: 9 / 10;
+    font-size: clamp(1rem, 4vw, 1.25rem);
+  }
+
+  .timeline-cards h2 {
+    font-size: 5vw !important;
+  }
+
+  .timeline-cards h3 {
+    font-size: 6vw !important;
+  }
+
+  .timeline-cards p {
+    font-size: 5vw !important;
+    line-height: 1.75;
+    padding: 18px;
+  }
+
+  .card-image {
+    width: 90% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.timeline-cards::-webkit-scrollbar {
+  height: 10px;
+}
+
+.timeline-cards::-webkit-scrollbar-thumb {
+  background: rgba(29, 78, 216, 0.4);
+  border-radius: 999px;
+}
+
+.timeline-cards > div {
+  flex: 0 0 auto;
+  position: relative;
+  background: #ffffff;
+  border-radius: 0; /* removed corner rounding */
+  box-shadow: 0 14px 30px rgba(14, 30, 77, 0.08);
+  width: 260px;
+  min-height: auto; /* taller to accommodate larger images */
+  padding: 18px;
+  box-sizing: border-box;
+  overflow: hidden;
+  scroll-snap-align: start;
+  transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms cubic-bezier(.2,.9,.2,1);
+}
+
+.timeline-cards > div:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 24px 5px rgba(14, 30, 77, 0.425);
+  z-index: 3;
+}
+
+.timeline-cards h2 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  color: #1d4ed8;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-cards h3 {
+  margin: 0 0 12px;
+  font-size: 1.3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-cards p {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.7;
+  background: rgba(0, 42, 103, 0.8);
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 2;
+}
+
+.timeline-cards > div:hover p {
+  opacity: 1;
+}
+
+.card-image {
+  width: 100%;
+  height: 160px;
+  display: block;
+  border-radius: 0;
+  margin-top: 0;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-note {
+  text-align: center;
+  max-width: 680px;
+  margin: 24px auto;
+  color: #334155;
+}
